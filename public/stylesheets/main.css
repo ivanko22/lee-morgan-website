@@ -33,10 +33,14 @@ body{
     font-weight: bold;
     font-size: 20px;
     color: white;
-    padding-top: 2%;
     width: 135px;
     text-align: center;
     text-decoration: none;
+    padding-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 .menu-item{
@@ -48,10 +52,12 @@ body{
     font-size: 20px;
     text-decoration: none;
     color: white;
-    padding-top: 2%;
     width: 125px;
-    text-align: center;
     background-color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 .menu-item:hover{
