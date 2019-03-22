@@ -16,4 +16,7 @@ app.get("/resume", function(request, response){
     response.render("resume.ejs");
 });
 
-app.listen(8080);
+var port = process.env.PORT || 8080;
+app.listen(port, function() {
+    console.log("app running");
+});
