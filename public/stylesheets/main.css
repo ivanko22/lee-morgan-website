@@ -25,7 +25,6 @@ body{
     background-color: black;
     height: 75px;
     display: flex;
-    cursor: pointer;
 }
 
 #header{
@@ -41,6 +40,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Roboto Slab', serif;
+    cursor: pointer;
 }
 
 .menu-item{
@@ -58,6 +58,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Roboto Slab', serif;
+    cursor: pointer;
 }
 
 .menu-item:hover{
