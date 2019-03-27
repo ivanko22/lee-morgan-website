@@ -3,14 +3,14 @@ body{
 }
 
 /* BIO */
-.container{
+.bio-container{
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 50px;
 }
 
-.text{
+.bio-text{
     max-width: 1250px;
     border: 1px solid black;
     padding: 50px;
@@ -18,14 +18,30 @@ body{
     box-shadow: -10px 10px 5px 0px rgb(131, 131, 131);
 }
 
-.text h1{
+.bio-text h1{
     text-align: center;
     font-size: 40px;
     text-decoration: underline;
 }
 
-.text p{
+.bio-text p{
     text-align: justify;
     font-size: 22px;
     margin-bottom: 20px;
+}
+
+/* EFL */
+.efl-container{
+    display: flex;
+    justify-content: center;
+}
+
+.efl-item a img{
+    max-width: 500px;
+    max-height: 500px;
+    box-shadow: -10px 10px 5px 0px rgb(131, 131, 131);
+}
+
+.efl-item h1{
+    text-align: center;
 }

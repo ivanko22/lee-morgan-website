@@ -17,6 +17,10 @@ app.get("/resume", function(request, response){
     response.render("resume.ejs");
 });
 
+app.get("/efl", (request, response) => {
+    response.render("efl.ejs");
+});
+
 app.get("/jeopardy", async function(request, response){
     const count = await Topics.countDocuments();
     const topicArr = await Promise.all([...new Array(6)].map(() => {
