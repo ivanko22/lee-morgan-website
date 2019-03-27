@@ -1,0 +1,45 @@
+.menu{
+    width: 100%;
+    background-color: black;
+    height: 75px;
+    display: flex;
+}
+
+#header{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    width: 135px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+}
+
+.menu-item{
+    margin: 10px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    width: 125px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    background-color: rgb(109, 109, 109);
+    cursor: pointer;
+}

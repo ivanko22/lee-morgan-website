@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JEOPARDY!</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/jeopardy.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+    <% include partials/menu %>
+    <div class="container">
+        <table>
+            <tr class="header table-row">
+                <% topics.forEach(function(topic){ %>
+                    <th><%= topic.title.toUpperCase(); %></th>
+                <% }); %>
+            </tr>
+            <tr class="spacer"></tr>
+            <tr class="table-row">
+                <% topics.forEach(function (topic){ %>
+                    <td>$200</td>
+                <% }); %>
+            </tr>
+            <tr class="table-row">
+                <% topics.forEach(function (topic){ %>
+                    <td>$400</td>
+                <% }); %>
+            </tr>
+            <tr class="table-row">
+                <% topics.forEach(function (topic){ %>
+                    <td>$600</td>
+                <% }); %>
+            <tr class="table-row">
+                <% topics.forEach(function (topic){ %>
+                    <td>$800</td>
+                <% }); %>
+            <tr class="table-row">
+                <% topics.forEach(function (topic){ %>
+                    <td>$1000</td>
+                <% }); %>
+            </tr>
+        </table>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        var topics = <%- JSON.stringify(topics) %>
+
+        var choices = document.querySelectorAll(".table-row td");
+        var modal = document.querySelector(".modal");
+        var modalContent = document.querySelector(".modal-content p");
+
+        //Assign rows and columns to each box
+        var count = 0;
+        for(var i = 0; i < 5; i++){
+            for(var j = 0; j < 6; j++){
+                choices[count].row = i;
+                choices[count].column = j;
+                count++;
+            }
+        }
+
+        //Add event listeners for each box
+        choices.forEach(function(choice){
+            choice.addEventListener("click", buttonClick);
+        });
+
+        //The button event
+        function buttonClick(){
+            currentTopic = topics[this.column];
+            currentQuestion = currentTopic.questions[this.row];
+            
+            modalContent.innerHTML = (currentQuestion.question).toUpperCase();
+            modal.style.visibility = "visible";
+
+            this.innerHTML = "";
+            this.style.cursor = "default";
+            this.removeEventListener("click", buttonClick);
+        }
+            
+        //Add modal behavior
+        var showingQuestion = true;
+        modal.addEventListener("click", function(){
+            if(showingQuestion){
+                modalContent.innerHTML = (currentQuestion.answer).toUpperCase();
+                showingQuestion = false;
+            }else{
+                modal.style.visibility = "hidden";
+                showingQuestion = true;
+            }
+        });
+            
+        
+    </script>
+</body>
+</html>

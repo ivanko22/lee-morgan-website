@@ -1,5 +1,7 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const Topics = require("./models/topicModel");
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
@@ -16,7 +18,17 @@ app.get("/resume", function(request, response){
     response.render("resume.ejs");
 });
 
+app.get("/jeopardy", async function(request, response){
+    const count = await Topics.countDocuments();
+    const topicArr = await Promise.all([...new Array(6)].map(() => {
+        const rand = Math.floor(Math.random() * Math.floor(count));
+        return Topics.findOne().skip(rand).exec();
+    }));
+
+    response.render("jeopardy.ejs", {topics: topicArr});
+});
+
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
-    console.log("app running");
+    console.log("Running on port " + port);
 });
