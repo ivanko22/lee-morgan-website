@@ -2,6 +2,7 @@
     width: 100%;
     background-color: black;
     height: 75px;
+    font-family: 'Roboto Slab', serif;
     display: flex;
 }
 
