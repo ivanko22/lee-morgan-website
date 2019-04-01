@@ -14,9 +14,9 @@ table{
 .container{
     text-align: center;
     background-color: black;
-    justify-content: center;
-    height: 600px;
-    width: 1000px;
+    justify-content: space-between;
+    height: 90vh;
+    width: 95vw;
     margin: auto;
     margin-top: 5px;
 }
@@ -24,8 +24,8 @@ table{
 .table-row td{
     background-color: #0104a3;
     color: yellow;
-    height: 83px;
-    width: 155px;
+    height: 13vh;
+    width: 15vw;
     font-family: 'Roboto Slab', serif;
     font-size: 48px;
     font-weight: bold;
@@ -35,7 +35,7 @@ table{
 .table-row th{
     background-color: #0104a3;
     color: white;
-    height: 83px;
+    height: 13vh;
     width: 155px;
     font-family: 'Roboto Slab', serif;
 }
