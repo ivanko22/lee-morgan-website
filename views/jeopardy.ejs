@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 <body>
-    <% include partials/menu %>
+    <div class="menu">
+        <a class="menu-item" href="/efl">&larr; Return</a>
+        <a class="menu-item">How To</a>
+    </div>
+
     <div class="container">
         <table>
             <tr class="header table-row">
@@ -51,12 +55,29 @@
         </div>
     </div>
 
+    <div class="howto-modal">
+        <div class="howto-modal-content">
+            <h1>How To Play<h1>
+            <ul>
+                <li>Every time you load the page a random set of topics and questions will be generated.  If you find that you have two of the same topic on a page, simply reload the page.</li>
+                <li>Click on a category to reveal the question.  Click on the page again to reveal the answer.  Click one more time to go back to the board.</li>
+                <li>Scoring and general gameplay is open for you to do however you see fit.</li>
+            </ul>
+            <h1>Suggestions</h1>
+            <ul>
+                <li>Unless you have "buzzers" to determine who rang in first, have one team/person answer questions until they get one wrong, then move on to the next team/person.  This helps prevent the chaos of people yelling over each other and not knowing who was first.</li>
+            </ul>
+        </div>
+    </div>
+
     <script>
         var topics = <%- JSON.stringify(topics) %>
 
         var choices = document.querySelectorAll(".table-row td");
         var modal = document.querySelector(".modal");
         var modalContent = document.querySelector(".modal-content p");
+        var howToBtn = document.querySelector(".menu");
+        var howToModal = document.querySelector(".howto-modal");
 
         //Assign rows and columns to each box
         var count = 0;
@@ -97,7 +118,16 @@
                 showingQuestion = true;
             }
         });
-            
+           
+        //Add event listener for How To
+        howToBtn.addEventListener("click", function(){
+            howToModal.style.visibility = "visible";
+        });
+
+        //Add event listener to remove modal on click
+        howToModal.addEventListener("click", () => {
+            howToModal.style.visibility = "hidden";
+        });
         
     </script>
 </body>

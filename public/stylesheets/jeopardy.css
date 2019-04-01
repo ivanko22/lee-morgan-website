@@ -45,7 +45,6 @@ table{
     height: 13vh;
     width: 15vw;
     font-family: 'Roboto Slab', serif;
-    /* font-size: 48px; */
     font-weight: bold;
     cursor: pointer;
 }
@@ -68,7 +67,9 @@ table{
     background-color: black;
 }
 
-.modal{
+
+/***** Modals ******/
+.modal, .howto-modal{
     position: fixed;
     left: o;
     top: 0;
@@ -100,4 +101,21 @@ table{
     font-size: 25px;
     font-weight: bold;
     color: white;
+}
+
+.howto-modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(204, 192, 176);
+    padding: 1rem 1.5rem;
+    font-family: 'PT Sans', sans-serif;
+    width: 75vw;
+    height: 75vh;
+}
+
+.howto-modal-content ul{
+    font-size: 1.5rem;
+    font-weight: normal;
 }
