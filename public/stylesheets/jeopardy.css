@@ -11,6 +11,24 @@ table{
     border-spacing: 10px;
 }
 
+@media screen and (min-width: 1000px){
+    .table-row td{
+        font-size: 48px;
+    }
+    .table-row th{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .table-row td{
+        font-size: 3vw;
+    }
+
+    .table-row th{
+        font-size: 2vw;
+    }
+}
 .container{
     text-align: center;
     background-color: black;
@@ -27,7 +45,7 @@ table{
     height: 13vh;
     width: 15vw;
     font-family: 'Roboto Slab', serif;
-    font-size: 48px;
+    /* font-size: 48px; */
     font-weight: bold;
     cursor: pointer;
 }
