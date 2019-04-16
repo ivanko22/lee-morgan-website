@@ -1,54 +1,116 @@
-<!DOCTYPE html>
-<html>
-<head>
+<% include partials/header %>
+
+<html class="gr__leemorgan_net"><head>
     <meta charset="utf-8">
-    <title>JEOPARDY!</title>
+    <title> Lets Play JEOPARDY Game </title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/jeopardy.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/menu.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
-<body>
-    <div class="menu">
-        <a class="menu-item" href="/efl">&larr; Return</a>
-        <div id="howto-btn" class="menu-item">How To</div>
-    </div>
+<body data-gr-c-s-loaded="true">
 
+  <div class="tittle">  Lets Play JEOPARDY Game </div>
+  
     <div class="container">
-        <table>
-            <tr class="header table-row">
-                <% topics.forEach(function(topic){ %>
-                    <th><%= topic.title.toUpperCase(); %></th>
-                <% }); %>
+      <div class="img">
+        
+          <button id="button" onclick="startBtn('button')"> START </button>
+         
+        <table style="margin-top: 0px;/*! padding-top: 4px; */">
+            <tbody><tr class="header table-row">
+                
+                    <th>GEOGRAPHY II</th>
+                
+                    <th>LL ANIMALS</th>
+                
+                    <th style="/*! margin-top: 0px; *//*! padding-top: 0px; *//*! border-top-width: 2px; *//*! border-top-style: solid; */">SPORTS</th>
+                
+                    <th>'H' WORDS</th>
+                
+                    <th>ANIMALS II</th>
+                
+                    <th>'F' WORDS</th>
+                
             </tr>
             <tr class="spacer"></tr>
-            <tr class="table-row">
-                <% topics.forEach(function (topic){ %>
+            <tr class="table-row" style="margin-top: 0px;padding-top: 0px;padding-right: 0px;">
+                
+                    <td style="/*! padding-top: 0px; *//*! padding-left: 0px; *//*! padding-right: 0px; *//*! padding-bottom: 0px; */">$200</td>
+                
+                    <td style="/*! border-top-width: 2px; *//*! border-top-style: solid; *//*! padding-left: 0px; *//*! padding-right: 0px; *//*! padding-top: 0px; *//*! padding-bottom: 0px; */">$200</td>
+                
                     <td>$200</td>
-                <% }); %>
+                
+                    <td>$200</td>
+                
+                    <td>$200</td>
+                
+                    <td>$200</td>
+                
             </tr>
             <tr class="table-row">
-                <% topics.forEach(function (topic){ %>
+                
                     <td>$400</td>
-                <% }); %>
+                
+                    <td>$400</td>
+                
+                    <td>$400</td>
+                
+                    <td>$400</td>
+                
+                    <td>$400</td>
+                
+                    <td>$400</td>
+                
             </tr>
             <tr class="table-row">
-                <% topics.forEach(function (topic){ %>
+                
                     <td>$600</td>
-                <% }); %>
-            <tr class="table-row">
-                <% topics.forEach(function (topic){ %>
+                
+                    <td>$600</td>
+                
+                    <td>$600</td>
+                
+                    <td>$600</td>
+                
+                    <td>$600</td>
+                
+                    <td>$600</td>
+                
+            </tr><tr class="table-row">
+                
                     <td>$800</td>
-                <% }); %>
-            <tr class="table-row">
-                <% topics.forEach(function (topic){ %>
+                
+                    <td>$800</td>
+                
+                    <td>$800</td>
+                
+                    <td>$800</td>
+                
+                    <td>$800</td>
+                
+                    <td>$800</td>
+                
+            </tr><tr class="table-row">
+                
                     <td>$1000</td>
-                <% }); %>
+                
+                    <td>$1000</td>
+                
+                    <td>$1000</td>
+                
+                    <td>$1000</td>
+                
+                    <td>$1000</td>
+                
+                    <td>$1000</td>
+                
             </tr>
-        </table>
+        </tbody></table>
     </div>
-
+    </div>
     <div class="modal">
         <div class="modal-content">
             <p></p>
@@ -57,26 +119,28 @@
 
     <div class="howto-modal">
         <div class="howto-modal-content">
-            <h1>How To Play<h1>
+            <h1>How To Play</h1><h1>
             <ul>
                 <li>Every time you load the page a random set of topics and questions will be generated.  If you find that you have two of the same topic on a page, simply reload the page.</li>
                 <li>Click on a category to reveal the question.  Click on the page again to reveal the answer.  Click one more time to go back to the board.</li>
                 <li>Scoring and general gameplay is open for you to do however you see fit.</li>
             </ul>
-            <h1>Suggestions</h1>
+            </h1><h1>Suggestions</h1>
             <ul>
                 <li>Unless you have "buzzers" to determine who rang in first, have one team/person answer questions until they get one wrong, then move on to the next team/person.  This helps prevent the chaos of people yelling over each other and not knowing who was first.</li>
             </ul>
         </div>
     </div>
 
-    <script>
-        var topics = <%- JSON.stringify(topics) %>
+    <script type="text/javascript">
+        var topics = [{"_id":"5ca48e230001302eff3c93f3","title":"Geography II","approved":true,"questions":[{"_id":"5ca48e230001302eff3c93f8","question":"The largest desert in the world","answer":"The Sahara Desert"},{"_id":"5ca48e230001302eff3c93f7","question":"The tallest mountain on Earth","answer":"Mount Everest"},{"_id":"5ca48e230001302eff3c93f6","question":"The deepest part of the ocean","answer":"The Marianas Trench"},{"_id":"5ca48e230001302eff3c93f5","question":"How many time zones are there in Russia?","answer":"11"},{"_id":"5ca48e230001302eff3c93f4","question":"The smallest country in the world","answer":"Vatican City"}],"__v":0},{"_id":"5ca47de8a396941b51cd7fd7","title":"LL animals","approved":true,"questions":[{"_id":"5ca47de8a396941b51cd7fdc","question":"A large predatory reptile often found in swamps","answer":"Alligator"},{"_id":"5ca47de8a396941b51cd7fdb","question":"A large primate often found in jungles","answer":"Gorilla"},{"_id":"5ca47de8a396941b51cd7fda","question":"A pack animal native to South America","answer":"Llama"},{"_id":"5ca47de8a396941b51cd7fd9","question":"A male cow","answer":"Bull"},{"_id":"5ca47de8a396941b51cd7fd8","question":"A bird often seen near beaches and coasts.  Often called 'Flying Rats'","answer":"Seagull"}],"__v":0},{"_id":"5ca47de8a396941b51cd7fbf","title":"Sports","approved":true,"questions":[{"_id":"5ca47de8a396941b51cd7fc4","question":"The name of the person that makes sure teams play fair","answer":"Referee"},{"_id":"5ca47de8a396941b51cd7fc3","question":"In this sport players atttempt to get a ball through a hoop on a high pole","answer":"Basketball"},{"_id":"5ca47de8a396941b51cd7fc2","question":"In this sport you use a stick to stike a puck into a goal","answer":"Hockey"},{"_id":"5ca47de8a396941b51cd7fc1","question":"the length of one half in a football (soccer) game","answer":"45 minutes"},{"_id":"5ca47de8a396941b51cd7fc0","question":"A 'first down', in American football, is achieved by moving the ball this distance","answer":"10 yards"}],"__v":0},{"_id":"5ca4967a34a21a3776e37b5c","title":"'H' words","approved":true,"questions":[{"_id":"5ca4967a34a21a3776e37b61","question":"Something worn on the head","answer":"Hat"},{"_id":"5ca4967a34a21a3776e37b60","question":"A special time of year.  Often with celebrations","answer":"Holiday"},{"_id":"5ca4967a34a21a3776e37b5f","question":"Sixty minutes","answer":"Hour"},{"_id":"5ca4967a34a21a3776e37b5e","question":"Another word for 'person'","answer":"Human"},{"_id":"5ca4967a34a21a3776e37b5d","question":"Extremely ugly","answer":"Hideous"}],"__v":0},{"_id":"5ca484d86832b3215595c522","title":"Animals II","approved":true,"questions":[{"_id":"5ca484d86832b3215595c527","question":"A blind, flying mammal","answer":"Bat"},{"_id":"5ca484d86832b3215595c526","question":"A 'test subject' animal","answer":"Guinea Pig"},{"_id":"5ca484d86832b3215595c525","question":"An animal that collects pollen and makes honey","answer":"Bee"},{"_id":"5ca484d86832b3215595c524","question":"The King of the Jungle","answer":"Lion"},{"_id":"5ca484d86832b3215595c523","question":"A long, 'slithery' animal","answer":"Snake"}],"__v":0},{"_id":"5ca48e230001302eff3c93ed","title":"'F' words","approved":true,"questions":[{"_id":"5ca48e230001302eff3c93f2","question":"Obese","answer":"Fat"},{"_id":"5ca48e230001302eff3c93f1","question":"Not real","answer":"Fake"},{"_id":"5ca48e230001302eff3c93f0","question":"Not many","answer":"Few"},{"_id":"5ca48e230001302eff3c93ef","question":"Another word for a business or other organization","answer":"Firm"},{"_id":"5ca48e230001302eff3c93ee","question":"To soar through the air","answer":"Fly"}],"__v":0}]
 
         var choices = document.querySelectorAll(".table-row td");
         var modal = document.querySelector(".modal");
         var modalContent = document.querySelector(".modal-content p");
         var howToBtn = document.querySelector("#howto-btn");
+
+        
         var howToModal = document.querySelector(".howto-modal");
 
         //Assign rows and columns to each box
@@ -129,6 +193,31 @@
             howToModal.style.visibility = "hidden";
         });
         
+      // The start button
+
+
+
+        // console.log('hello');
+      
+    function startBtn( btn ) {
+
+        var modalBtn = document.querySelector("#button");
+        var container = document.querySelector(".container");
+        var tableGame = document.querySelector("table");
+
+        modalBtn.style.visibility = "hidden";
+        container.style.borderColor = "rgba(224, 234, 224, 0.8)";
+        container.style.backgroundColor = "#21522496";
+        tableGame.style.filter = "opacity(70)";
+        tableGame.style.pointerEvents = "all";
+        
+        console.log(tableGame);
+        console.log(btn);
+        console.log('hello');
+      }
+      
+      
+      
     </script>
-</body>
-</html>
+
+</body></html>
