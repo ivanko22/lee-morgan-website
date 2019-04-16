@@ -1,9 +1,12 @@
 const express = require("express");
+const mongo = require("mongoose");
 
 const Topics = require("./models/topicModel");
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
+
+mongo.connect(process.env.JEOPARDY_DB, {useNewUrlParser:true});
 
 app.get("/", function(request, response){
     response.render("home.ejs");
