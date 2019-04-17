@@ -48,7 +48,6 @@ table {
   opacity: 0.85;
 }
 
-
 @media screen and (min-width: 1000px) {
   .table-row td {
     font-size: 36px;
