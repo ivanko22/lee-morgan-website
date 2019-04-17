@@ -31,7 +31,7 @@ table {
   padding-bottom: 24px;
   padding-right: 90px;
   padding-left: 90px;
-    font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
   font-size: 150%;
   font-weight: bold;
@@ -43,7 +43,6 @@ table {
 }
 
 #button:hover {
-
   top: 55.5%;
   transition: 0.3s;
   opacity: 0.85;
@@ -99,6 +98,7 @@ table {
 .table-row td:hover {
   background-color: #dfeae1;
   color: rgb(31, 90, 45);
+  transition: 0.7s;
 }
 
 .table-row th {
