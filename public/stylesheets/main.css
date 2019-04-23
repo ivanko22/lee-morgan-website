@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #e9e9e9;
 }
 
 /* BIO */
@@ -34,7 +35,8 @@ body{
 /* EFL */
 .efl-container{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 14%;
 }
 
 .efl-item a img{
@@ -43,6 +45,79 @@ body{
     box-shadow: -10px 10px 5px 0px rgb(131, 131, 131);
 }
 
-.efl-item h1{
+.efl-item h1 {
     text-align: center;
+    margin-top: 28%;
+    margin-bottom: 0px;
 }
+/*Content Start*/
+
+.content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 14%;
+    margin-right: 14%;
+    }
+
+.content-image {
+    width: 370px;
+    height: 206px;
+    background-image: url("/images/jeopardy_backplate.png");
+    
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 34px;
+    margin-top: 24px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+
+}
+
+.content-description {
+    width: 60%;
+    margin-left: 24px;
+    margin-top: 24px;
+    margin-right: 34px;
+    margin-bottom: 24px;
+    font-size: large;
+}
+
+.content-tittle {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.content-image-backplate {
+background-color: black
+
+}
+
+#button {
+  background-color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 110%;
+  font-weight: bold;
+  text-align: center;
+  color: #226c26;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  height: 28%;
+  width: 50%;
+}
+
+#button:hover {
+background-color: white;
+color: #226c26;
+transform: scale(1.1);
+}
+
