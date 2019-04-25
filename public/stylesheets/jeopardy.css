@@ -21,8 +21,6 @@ table {
   width: 100%;
 }
 
-
-
 @media screen and (min-width: 1000px) {
   .table-row td {
     font-size: 36px;
@@ -62,7 +60,6 @@ table {
   font-family: "Roboto Slab", serif;
   font-weight: bolder;
   cursor: pointer;
-  /*! border: `; */
   border-style: solid;
   border-width: 1.9px;
   padding: 1.6%;

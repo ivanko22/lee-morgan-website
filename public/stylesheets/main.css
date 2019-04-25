@@ -50,8 +50,8 @@ body{
     margin-top: 28%;
     margin-bottom: 0px;
 }
-/*Content Start*/
 
+/*Content Start*/
 .content {
     display: flex;
     align-items: center;
@@ -59,13 +59,12 @@ body{
     margin-top: 3%;
     margin-left: 14%;
     margin-right: 14%;
-    }
+}
 
 .content-image {
     width: 370px;
     height: 206px;
     background-image: url("/images/jeopardy_backplate.png");
-    
     background-position: center;
     background-size: cover;
     display: flex;
@@ -75,7 +74,6 @@ body{
     margin-top: 24px;
     margin-right: 24px;
     margin-bottom: 24px;
-
 }
 
 .content-description {
@@ -94,30 +92,38 @@ body{
 }
 
 .content-image-backplate {
-background-color: black
-
+    background-color: black
 }
 
-#button {
-  background-color: white;
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-  font-size: 110%;
-  font-weight: bold;
-  text-align: center;
-  color: #226c26;
-  z-index: 1;
-  border: none;
-  cursor: pointer;
-  border: none;
-  cursor: pointer;
-  height: 28%;
-  width: 50%;
+.button {
+    background-color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+    color: #226c26;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    border: none;
+    cursor: pointer;
+    height: 28%;
+    width: 50%;
 }
 
-#button:hover {
-background-color: white;
-color: #226c26;
-transform: scale(1.1);
+.button:hover. .button:active {
+    background-color: white;
+    color: #226c26;
+    transform: scale(1.1);
 }
 
+a:link {text-decoration: none;
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Content End*/
