@@ -64,7 +64,6 @@ body{
 .content-image {
     width: 370px;
     height: 206px;
-    background-image: url("/images/jeopardy_backplate.png");
     background-position: center;
     background-size: cover;
     display: flex;
